@@ -6,7 +6,7 @@
 // Created on: Apr 2022
 // This file contains the JS functions for index.html
 
-import SplashScene from './splashScene.js'
+import SplashScene from "./splashScene.js"
 
 // Our game scene
 const splashScene = new SplashScene()
@@ -20,7 +20,7 @@ const config = {
     default: "arcade",
     arcade: {
       debug: true,
-    }
+    },
   },
   // set background color
   backgroundColor: 0x5f6e7a,
@@ -28,15 +28,15 @@ const config = {
     mode: Phaser.Scale.FIT,
     // we place it in the middle of the page.
 
-    autoCenter: Phaser.Scale.CENTER_BOTH
-  }
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
 }
 
 const game = new Phaser.Game(config)
 
 // load scenes
 // Note: remember any "key" is global and CAN NOT be reused:
-game.scene.add('splashScene', splashScene)
+game.scene.add("splashScene", splashScene)
 
 // start title
-game.scene.start('splashScene')
+game.scene.start("splashScene")
