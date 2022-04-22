@@ -28,9 +28,12 @@ const config = {
     mode: Phaser.Scale.FIT,
     // we place it in the middle of the page.
 <<<<<<< HEAD
+<<<<<<< HEAD
     autoCenter: Phaser.Scale.CENTER_BOTH
   }
 =======
+=======
+>>>>>>> origin/main
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
 >>>>>>> origin/main
