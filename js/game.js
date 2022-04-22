@@ -27,13 +27,8 @@ const config = {
   scale: {
     mode: Phaser.Scale.FIT,
     // we place it in the middle of the page.
-<<<<<<< HEAD
     autoCenter: Phaser.Scale.CENTER_BOTH
   }
-=======
-    autoCenter: Phaser.Scale.CENTER_BOTH,
-  },
->>>>>>> origin/main
 }
 
 const game = new Phaser.Game(config)
