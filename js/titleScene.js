@@ -11,10 +11,10 @@
  */
 class TitleScene extends Phaser.Scene {
   /**
-   * This method is the constructor 
+   * This method is the constructor
    */
   constructor() {
-    super ({ key: "titleScene" })
+    super({ key: "titleScene" })
   }
 
   /**
@@ -22,7 +22,7 @@ class TitleScene extends Phaser.Scene {
    * this method is called by the Scene Manager when the scene starts,
    * before preload() and create().
    * @param {object} data - Any data via ScenePlugin.add() or ScenePlugin.start().
-    */
+   */
   init(data) {
     this.cameras.main.setBackgroundColor("#ffffff")
   }
@@ -39,17 +39,17 @@ class TitleScene extends Phaser.Scene {
    * Can be defined on your own Scenes.
    * Use it to create your game objects.
    * @param {object} data - Any data via ScenePlugin.add() or ScenePlugin.start().
-    */
+   */
   create(data) {
     //pass
   }
 
   /**
    * Should be overridden by your own Scenes.
-    * This method is called once per game step while the scene is running.
-    * @param {number} time - the current time.
-    * @param {number} delta - The delta time in ms since the last frame.
-    */
+   * This method is called once per game step while the scene is running.
+   * @param {number} time - the current time.
+   * @param {number} delta - The delta time in ms since the last frame.
+   */
   update(time, delta) {
     // pass
   }
