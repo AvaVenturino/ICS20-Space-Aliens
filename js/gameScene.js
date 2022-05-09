@@ -19,7 +19,7 @@ class GameScene extends Phaser.Scene {
     this.background = null
     this.ship = null
   }
-  
+
   /**
    * Can be defined on your own Scenes.
    * this method is called by the Scene Manager when the scene starts,
