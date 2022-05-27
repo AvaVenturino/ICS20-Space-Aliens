@@ -98,7 +98,7 @@ class GameScene extends Phaser.Scene {
     this.alienGroup = this.add.group()
     this.createAlien()
 
-    //Collisions between misslies and aliens
+    //Collisions between missiles and aliens
     this.physics.add.collider(
       this.missileGroup,
       this.alienGroup,
@@ -107,33 +107,22 @@ class GameScene extends Phaser.Scene {
         missileCollide.destroy()
         this.sound.play("explosion")
         this.score = this.score + 1
-        this.scoreText.setText("Score: " + this.score.toString())
+        this.scoreText.setText('Score: ' + this.score.toString())
         this.createAlien()
         this.createAlien()
-      }.bind(this)
-    )
+      }.bind(this))
 
     // Collisions between ship and aliens
-    this.physics.add.collider(
-      this.ship,
-      this.alienGroup,
-      function (shipCollide, alienCollide) {
-        this.sound.play("bomb")
-        this.physics.pause()
-        alienCollide.destroy()
-        shipCollide.destroy()
-        this.gameOverText = this.add
-          .text(
-            1920 / 2,
-            1080 / 2,
-            "Game Over:\nClick to play again",
-            this.gameOverTextStyle
-          )
-          .setOrigin(0.5)
-        this.gameOverText.setInteractive({ userHandCurser: true })
-        this.gameOverText.on("pointerdown", () => this.scenestart("gameScene"))
-      }.bind(this)
-    )
+    this.physics.add.collider(this.ship, this.alienGroup, function (shipCollide, alienCollide) {
+      this.sound.play('bomb')
+      this.physics.pause()
+      alienCollide.destroy()
+      shipCollide.destroy()
+      this.gameOverText = this.add.text(1920 / 2, 1080 / 2, 'Game Over!\nClick to play again.', this.gameOverTextStyle).setOrigin(0.5)
+      this.gameOverText.setInteractive({ userHandCursor: true })
+      this.gameOverText.on('pointerdown', () => this.scene.start('gameScene'))
+    }.bind(this))
+    
   }
 
   /**
